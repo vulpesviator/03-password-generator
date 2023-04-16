@@ -17,35 +17,45 @@ function generatePassword() {
     passwordLength = window.prompt(`Please enter the length of your password between "8" and "128"`);
   }
 
-  var finalPassword = "";
-
-  for (let i = 0; i < length; i++) {
-    finalPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
-  }
-
-  /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
-  var lowercase = true;
+    /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
+  var lowercase = window.confirm(`Would you like to use lowercase letters?`);
   var uppercase = window.confirm(`Would you like to use uppercase letters?`);
   var numbers = window.confirm(`Would you like to use numbers?`);
   var special = window.confirm(`Would you like to use special characters?`);
 
   var charSet = "";
-    // if (lowercase) {
-    //   charSet = appendix.lowerCase;
-    // } else if (uppercase) {
-    //   charSet = appendix.uppercase;
-    // } else if (numbers) {
-    //   charSet = appendix.numbers;
-    // } else if (special) {
-    //   charSet = appendix.special;
-    // } else if (lowercase && uppercase) {
-    //   charSet = appendix.lowercase + appendix.uppercase;
-    // }
-    
-    
-    // else {
-    //   window.alert(`Please choose at least one `)
-    // }
+    if (lowercase && uppercase && numbers && special) {
+      charSet = appendix.lowerCase + appendix.upperCase + appendix.numbers + appendix.special;
+    } else if (lowercase && uppercase && numbers) {
+      charSet = appendix.lowerCase + appendix.upperCase + appendix.numbers;
+    } else if (lowercase && uppercase && special) {
+      charSet = appendix.lowerCase + appendix.upperCase +appendix.special;
+    } else if (uppercase && numbers && special) {
+      charSet = appendix.upperCase + appendix.numbers + appendix.special;
+    } else if (lowercase && uppercase) {
+      charSet = appendix.lowerCase + appendix.upperCase;
+    } else if (lowercase && numbers) {
+      charSet = appendix.lowerCase + appendix.numbers;
+    } else if (lowercase && special) {
+      charSet = appendix.lowerCase + appendix.special;
+    } else if (uppercase && numbers) {
+      charSet = appendix.upperCase + appendix.numbers;
+    } else if (uppercase && special) {
+      charSet = appendix.upperCase + appendix.special;
+    } else if (numbers && special) {
+      charSet = appendix.numbers + appendix.special;
+    } else if (lowercase) {
+      charSet = appendix.lowerCase;
+    } else if (uppercase) {
+      charSet = appendix.upperCase;
+    } else if (numbers) {
+      charSet = appendix.numbers;
+    } else if (special) {
+      charSet = appendix.special;
+    } else {
+      window.alert(`Please select at least one group of characters to use.`);
+      generatePassword();
+    }
   
   console.log(charSet);
   console.log(length);
@@ -54,6 +64,12 @@ function generatePassword() {
   console.log(numbers);
   console.log(special);
   
+  var finalPassword = "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    finalPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
+  }
+
   return finalPassword;
   
 };
