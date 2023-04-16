@@ -12,10 +12,10 @@ function generatePassword() {
   /* WHEN I select GENERATE PASSWORD there is a prompt to determine LENGTH of the PASSWORD that is at least 8 and no more than 128 characters */
   var passwordLength = window.prompt(`Please enter the length for your password between "8" and "128"`);
   
-  if (passwordLength < 9 || passwordLength > 129) {
-    window.alert(`The value has to be the length of your password betwen the values of "8" and "128". Please try again.`);
-    passwordLength = window.prompt(`Please enter the length of your password between "8" and "128"`);
-  }
+    if (passwordLength <= 8 || passwordLength >= 128) {
+      window.alert(`The value has to be the length of your password betwen the values of "8" and "128". Please try again.`);
+      passwordLength = window.prompt(`Please enter the length of your password between "8" and "128"`);
+    }
 
     /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
   var lowercase = window.confirm(`Would you like to use lowercase letters?`);
@@ -66,9 +66,9 @@ function generatePassword() {
   
   var finalPassword = "";
 
-  for (let i = 0; i < passwordLength; i++) {
-    finalPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
-  }
+    for (let i = 0; i < passwordLength; i++) {
+      finalPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
+    }
 
   return finalPassword;
   
