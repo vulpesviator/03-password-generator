@@ -14,15 +14,33 @@ var appendix = {
 THEN there is a prompt to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
 
 function generatePassword() {
-  var length = window.prompt(`Input a length for your password between "8" and "128"`);
-  var appendix = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&\'()*+,-./:;<=>?@[]^_\`{|}~`;
+  var passwordLength = window.prompt(`Please enter the length for your password between "8" and "128"`);
+  
+  if (passwordLength <= 8 || passwordLength >= 128) {
+    window.alert(`The value has to be the length of your password betwen the values of "8" and "128". Please try again.`);
+    passwordLength = window.prompt(`Please enter the length of your password between "8" and "128"`)
+  }
+  
+  var uppercase = window.confirm(`Would you like to use uppercase letters?`);
+  var lowercase = window.confirm(`Would you like to use lowercase letters?`);
+  var numbers = window.confirm(`Would you like to use numbers?`);
+  var special = window.confirm(`Would you like to use special characters?`)
+  
+  console.log(length);
+  console.log(uppercase);
+  console.log(lowercase);
+  console.log(numbers);
+  console.log(special);
   
   var finalPassword = "";
+  return finalPassword;
+  /*
+  
       for (var i = 0, n = appendix.length; i < appendix.length; i++) {
         finalPassword = appendix.charAt[Math.floor(Math.random() * n)];
       return finalPassword;
       }
-  
+  */
 
 };
 
