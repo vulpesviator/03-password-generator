@@ -14,20 +14,20 @@ var appendix = {
 THEN there is a prompt to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
 
 function generatePassword() {
-  var length = window.prompt(`Input a length for your password between "8" and "128"`),
-      appendix = { upperCase: confirm(`Would you like uppercase letters?`),
-                   lowerCase: confirm(`Would you like lower case letters?`),
-                   numbers: confirm(`Would you like to use numbers?`),
-                   special: confirm(`Would you like to use special characters?`)},
-      finalPassword = "";
-      for (var i = 0, n = appendix.length; i < length; i++) {
-        finalPassword += appendix[Math.floor(Math.random() * n)];
+  var length = window.prompt(`Input a length for your password between "8" and "128"`);
+  var appendix = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&\'()*+,-./:;<=>?@[]^_\`{|}~`;
+  
+  var finalPassword = "";
+      for (var i = 0, n = appendix.length; i < appendix.length; i++) {
+        finalPassword = appendix.charAt[Math.floor(Math.random() * n)];
       return finalPassword;
       }
   
-  
 
 };
+
+console.log(Number(length));
+
 
 // 
 /* WHEN all prompts are answers then a password is generate that matches my criteria from the prompts */
@@ -46,10 +46,8 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-/*
-var passwordLength = generateBtn.addEventListener("click", e => {
-  window.prompt("Input a length between 8 and 128")
-})
-
-console.log(passwordLength);
-*/
+/* { upperCase: confirm(`Would you like uppercase letters?`),
+                   lowerCase: confirm(`Would you like lower case letters?`),
+                   numbers: confirm(`Would you like to use numbers?`),
+                   special: confirm(`Would you like to use special characters?`)}
+                   */
