@@ -12,12 +12,12 @@ function generatePassword() {
   /* WHEN I select GENERATE PASSWORD there is a prompt to determine LENGTH of the PASSWORD that is at least 8 and no more than 128 characters */
   var passwordLength = window.prompt(`Please enter the length for your password between "8" and "128"`);
   
-    if (passwordLength <= 8 || passwordLength >= 128) {
+    if (passwordLength < 8 || passwordLength > 128) {
       window.alert(`The value has to be the length of your password betwen the values of "8" and "128". Please try again.`);
       passwordLength = window.prompt(`Please enter the length of your password between "8" and "128"`);
     }
 
-    /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
+  /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
   var lowercase = window.confirm(`Would you like to use lowercase letters?`);
   var uppercase = window.confirm(`Would you like to use uppercase letters?`);
   var numbers = window.confirm(`Would you like to use numbers?`);
@@ -59,12 +59,8 @@ function generatePassword() {
       generatePassword();
     }
   
-  console.log(charSet);
-  console.log(lowercase);
-  console.log(uppercase);
-  console.log(numbers);
-  console.log(special);
-  
+  /* WHEN all prompts are answers then a password is generated that matches my criteria from the prompts */
+
   var finalPassword = "";
 
     for (let i = 0; i < passwordLength; i++) {
@@ -74,12 +70,6 @@ function generatePassword() {
   return finalPassword;
   
 };
-
-console.log(Number(length));
-
-
-// 
-/* WHEN all prompts are answers then a password is generate that matches my criteria from the prompts */
 
 // Write password to the #password input
 function writePassword() {
@@ -92,3 +82,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
