@@ -30,6 +30,8 @@ function generatePassword() {
       charSet = appendix.lowerCase + appendix.upperCase + appendix.numbers;
     } else if (lowercase && uppercase && special) {
       charSet = appendix.lowerCase + appendix.upperCase +appendix.special;
+    } else if (lowercase && numbers && special) {
+      charSet = appendix.lowerCase + appendix.numbers + appendix.special;
     } else if (uppercase && numbers && special) {
       charSet = appendix.upperCase + appendix.numbers + appendix.special;
     } else if (lowercase && uppercase) {
@@ -58,9 +60,8 @@ function generatePassword() {
     }
   
   console.log(charSet);
-  console.log(length);
-  console.log(uppercase);
   console.log(lowercase);
+  console.log(uppercase);
   console.log(numbers);
   console.log(special);
   
