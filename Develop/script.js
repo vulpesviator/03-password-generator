@@ -22,7 +22,8 @@ function generatePassword() {
   var uppercase = window.confirm(`Would you like to use uppercase letters?`);
   var numbers = window.confirm(`Would you like to use numbers?`);
   var special = window.confirm(`Would you like to use special characters?`);
-
+  
+  /* IF loop determines which set of characters to use from the object 'appendix' */
   var charSet = "";
     if (lowercase && uppercase && numbers && special) {
       charSet = appendix.lowerCase + appendix.upperCase + appendix.numbers + appendix.special;
