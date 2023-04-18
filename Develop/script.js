@@ -16,11 +16,9 @@ function generatePassword() {
 
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert(
-      `The value has to be the length of your password betwen the values of "8" and "128". Please try again.`
+      `The length of your password has to be betwen the values of "8" and "128". Please try again.`
     );
-    passwordLength = window.prompt(
-      `Please enter the length of your password between "8" and "128"`
-    );
+    return generatePassword();
   }
 
   /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
@@ -57,6 +55,8 @@ function generatePassword() {
   }
 
   /* WHEN all prompts are answers then a password is generated that matches my criteria from the prompts */
+
+  console.log(charSet);
 
   var finalPassword = "";
 
