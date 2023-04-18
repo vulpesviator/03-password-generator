@@ -55,9 +55,6 @@ function generatePassword() {
   }
 
   /* WHEN all prompts are answers then a password is generated that matches my criteria from the prompts */
-
-  console.log(charSet);
-
   var finalPassword = "";
 
   for (let i = 0; i < passwordLength; i++) {
