@@ -8,7 +8,17 @@ This project utilizes JavaScript in order to create a unique and randomized pass
 
 The site is currently deployed for review on [github pages](#). 
 
-![Password Generator Screenshot](#)
+![Password Generator Screenshot](https://user-images.githubusercontent.com/123843930/232893495-8b6b7904-5824-41fe-a78a-5732a3e45c5d.gif)
+
+1. To generate a random password with specified character sets, first click `Generate Password` on the `index.html`.
+2. You will be prompted to select a length for you password. The lengtho of the password must be between 8 and 128 characters in length. 
+3. Next you will be prompted if you wish to use lowercase letters to create the password. `Ok` will use lowercase letters, `Cancel` will not. 
+4. Next you will be prompted if you wish to use uppercase letters to create the password. `Ok` will use uppercase letters, `Cancel` will not.
+5. Next you will be prompted if you wish to use numbers to create the password. `Ok` will use numbers, `Cancel` will not. 
+6. Next you will be prompted if you wish to use a set of special characters as specified by the OWASP Foundation to create the password. `Ok` will use special characters, `Cancel` will not.
+7. You must choose at least one set of these characters to use to create the password. 
+8. The random password will be generated in the text area of the `index.html` and can be copied and used as needed. 
+
 
 ## Credits
 
