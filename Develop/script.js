@@ -25,16 +25,16 @@ function generatePassword() {
 
   /* THEN there are prompts to confirm if I should include LOWERCASE, UPPERCASE, NUMERIC, and/or SPECIAL CHARACTERS  */
   var lowercase = window.confirm(
-    `Would you like to use lowercase letters? Click OK for yes and CANCEL for no.`
+    `Would you like to use lowercase letters?\nClick OK for Yes and CANCEL for No.`
   );
   var uppercase = window.confirm(
-    `Would you like to use uppercase letters? Click OK for yes and CANCEL for no.`
+    `Would you like to use uppercase letters?\nClick OK for Yes and CANCEL for No.`
   );
   var numbers = window.confirm(
-    `Would you like to use numbers? Click OK for yes and CANCEL for no.`
+    `Would you like to use numbers?\nClick OK for Yes and CANCEL for No.`
   );
   var special = window.confirm(
-    `Would you like to use special characters? Click OK for yes and CANCEL for no.`
+    `Would you like to use special characters?\nClick OK for Yes and CANCEL for No.`
   );
 
   /* IF loop determines which set of characters to use from the object 'appendix' */
