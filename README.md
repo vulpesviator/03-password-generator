@@ -6,7 +6,7 @@ This project utilizes JavaScript in order to create a unique and randomized pass
 
 ## Usage
 
-The site is currently deployed for review on [github pages](#). 
+The site is currently deployed for review on [github pages](https://vulpesviator.github.io/03-password-generator/Develop/index.html). 
 
 To run this application locally, clone or download the `Develop` folder which contains the necssary html, css, and js files. 
 
