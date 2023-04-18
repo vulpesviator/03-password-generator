@@ -8,6 +8,8 @@ This project utilizes JavaScript in order to create a unique and randomized pass
 
 The site is currently deployed for review on [github pages](#). 
 
+To run this application locally, clone or download the `Develop` folder which contains the necssary html, css, and js files. 
+
 ![Password Generator Screenshot](https://user-images.githubusercontent.com/123843930/232893495-8b6b7904-5824-41fe-a78a-5732a3e45c5d.gif)
 
 1. To generate a random password with specified character sets, first click `Generate Password` on the `index.html`.
